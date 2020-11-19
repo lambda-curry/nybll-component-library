@@ -12,13 +12,7 @@ export interface WeeklyMenuProps {
 export const WeeklyMenu: FC<WeeklyMenuProps> = ({ menu }) => {
   const tabs = menu.map(item => ({
     label: item.name,
-    render: (
-      <WeeklyMenuTabPanel
-        id={item.id}
-        menu={item}
-        className="nybll-section padding-b-0"
-      />
-    ),
+    render: <WeeklyMenuTabPanel id={item.id} menu={item} className="nybll-section padding-b-0" />
   }));
 
   return (

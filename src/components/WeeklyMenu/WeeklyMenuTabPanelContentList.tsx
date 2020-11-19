@@ -7,15 +7,12 @@ interface WeeklyMenuTabPanelContentListProps {
   heading: string;
 }
 
-export const WeeklyMenuTabPanelContentList: FC<WeeklyMenuTabPanelContentListProps> = ({
-  dishes,
-  heading,
-}) => (
+export const WeeklyMenuTabPanelContentList: FC<WeeklyMenuTabPanelContentListProps> = ({ dishes, heading }) => (
   <div className="nybll-weekly-menu-tab-panel-content-list">
     <h6 className="font-family-sans-serif font-weight-bold">{heading}</h6>
 
     <ul className="padding-l-0">
-      {dishes.map((dish) => (
+      {dishes.map(dish => (
         <li key={dish.name} className="nybll-weekly-menu-tab-panel-item">
           {dish.name}
           {dish.containsGluten && (

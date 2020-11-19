@@ -3,7 +3,7 @@ import { WeeklyMenu, Menu } from '.';
 
 export default {
   title: 'Components/WeeklyMenu',
-  component: WeeklyMenu,
+  component: WeeklyMenu
 };
 
 export const WeeklyMenuStory = () => {
@@ -13,22 +13,22 @@ export const WeeklyMenuStory = () => {
     orderLink: '#',
     image: {
       webp: '',
-      png: '',
+      png: ''
     },
     items: [
       {
         type: 'entree',
-        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa',
+        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa'
       },
       {
         type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette',
+        name: 'Garden Salad + Balsamic Vinaigrette'
       },
       {
         type: 'soup',
-        name: 'Curried Carrot and Apple Soup',
-      },
-    ],
+        name: 'Curried Carrot and Apple Soup'
+      }
+    ]
   };
 
   const pescatarianMenu: Menu = {
@@ -37,22 +37,22 @@ export const WeeklyMenuStory = () => {
     orderLink: '#',
     image: {
       webp: '',
-      png: '',
+      png: ''
     },
     items: [
       {
         type: 'entree',
-        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa',
+        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
       },
       {
         type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette',
+        name: 'Garden Salad + Balsamic Vinaigrette'
       },
       {
         type: 'soup',
-        name: 'Curried Carrot and Apple Soup',
-      },
-    ],
+        name: 'Curried Carrot and Apple Soup'
+      }
+    ]
   };
 
   const plantBasedMenu: Menu = {
@@ -61,22 +61,22 @@ export const WeeklyMenuStory = () => {
     orderLink: '#',
     image: {
       webp: '',
-      png: '',
+      png: ''
     },
     items: [
       {
         type: 'entree',
-        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa',
+        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
       },
       {
         type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette',
+        name: 'Garden Salad + Balsamic Vinaigrette'
       },
       {
         type: 'soup',
-        name: 'Curried Carrot and Apple Soup',
-      },
-    ],
+        name: 'Curried Carrot and Apple Soup'
+      }
+    ]
   };
 
   const nonRedMeatMenu: Menu = {
@@ -85,30 +85,25 @@ export const WeeklyMenuStory = () => {
     orderLink: '#',
     image: {
       webp: '',
-      png: '',
+      png: ''
     },
     items: [
       {
         type: 'entree',
-        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa',
+        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa'
       },
       {
         type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette',
+        name: 'Garden Salad + Balsamic Vinaigrette'
       },
       {
         type: 'soup',
-        name: 'Curried Carrot and Apple Soup',
-      },
-    ],
+        name: 'Curried Carrot and Apple Soup'
+      }
+    ]
   };
 
-  const menus = [
-    flexitarianMenu,
-    pescatarianMenu,
-    plantBasedMenu,
-    nonRedMeatMenu,
-  ];
+  const menus = [flexitarianMenu, pescatarianMenu, plantBasedMenu, nonRedMeatMenu];
 
   return <WeeklyMenu menu={menus} />;
 };
