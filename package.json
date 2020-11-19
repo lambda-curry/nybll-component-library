@@ -1,9 +1,11 @@
 {
-  "name": "@nybll/component-library",
   "version": "0.1.0",
   "license": "MIT",
+  "name": "@nybll/component-library",
+  "author": "Jared Hill",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/component-library.esm.js",
   "files": [
     "dist",
     "src"
@@ -20,7 +22,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format": "prettier --write \"(src|test|types)/**/*.{js,jsx,ts,tsx,scss}\""
   },
   "peerDependencies": {
     "react": ">=16"
@@ -30,42 +33,38 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "author": "Jared Hill",
-  "module": "dist/component-library.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/component-library.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/component-library.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@size-limit/preset-small-lib": "^4.8.0",
-    "@storybook/addon-essentials": "^6.1.0",
+    "@storybook/addon-a11y": "^6.1.1",
+    "@storybook/addon-essentials": "^6.1.1",
     "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.1.0",
-    "@storybook/addons": "^6.1.0",
-    "@storybook/react": "^6.1.0",
+    "@storybook/addon-links": "^6.1.1",
+    "@storybook/addon-storysource": "^6.1.1",
+    "@storybook/addons": "^6.1.1",
+    "@storybook/react": "^6.1.1",
+    "@svgr/rollup": "^5.5.0",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
     "babel-loader": "^8.2.1",
+    "babel-plugin-react-require": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "postcss-import": "^13.0.0",
+    "postcss-scss": "^3.0.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-url": "^3.0.1",
     "size-limit": "^4.8.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@lambdacurry/component-library": "^0.5.26"
   }
 }
