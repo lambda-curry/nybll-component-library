@@ -1,6 +1,19 @@
 {
   "version": "0.1.0",
   "license": "MIT",
+  "name": "@nybll/component-library",
+  "author": "Jared Hill",
+  "module": "dist/component-library.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/component-library.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/component-library.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -35,19 +48,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "nybll-component-library",
-  "author": "Jared Hill",
-  "module": "dist/nybll-component-library.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/nybll-component-library.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/nybll-component-library.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@size-limit/preset-small-lib": "^4.8.0",
