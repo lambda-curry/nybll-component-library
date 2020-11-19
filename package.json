@@ -22,7 +22,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format": "prettier --write \"(src|test|types)/**/*.{js,jsx,ts,tsx,scss}\""
   },
   "peerDependencies": {
     "react": ">=16"
