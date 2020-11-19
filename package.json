@@ -2,6 +2,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "name": "@nybll/component-library",
+  "repository": "git://github.com/Lambda-Curry/nybll-component-library.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Jared Hill",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
