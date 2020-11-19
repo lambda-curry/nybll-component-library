@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-// import { ReactComponent as SvgIconGluten } from '../../icons/gluten.svg';
-import glutenIcon from '../../icons/gluten.svg';
+import { ReactComponent as SvgIconGluten } from '../../icons/gluten.svg';
 import { Dish } from './WeeklyMenu.types';
 
 interface WeeklyMenuTabPanelContentListProps {
@@ -16,11 +15,13 @@ export const WeeklyMenuTabPanelContentList: FC<WeeklyMenuTabPanelContentListProp
     <h6 className="font-family-sans-serif font-weight-bold">{heading}</h6>
 
     <ul className="padding-l-0">
-      {dishes.map(dish => (
+      {dishes.map((dish) => (
         <li key={dish.name} className="nybll-weekly-menu-tab-panel-item">
           {dish.name}
           {dish.containsGluten && (
-            <div className="contains-gluten">{glutenIcon}</div>
+            <div className="contains-gluten">
+              <SvgIconGluten />
+            </div>
           )}
         </li>
       ))}

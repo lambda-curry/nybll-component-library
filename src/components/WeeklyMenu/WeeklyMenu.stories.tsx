@@ -113,4 +113,4 @@ export const WeeklyMenuStory = () => {
   return <WeeklyMenu menu={menus} />;
 };
 
-WeeklyMenuStory.storyName = 'Weekly Menu';
+WeeklyMenuStory.storyName = 'Default';
