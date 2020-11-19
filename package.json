@@ -42,6 +42,14 @@
       "pre-commit": "tsdx lint"
     }
   },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "none",
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "tabWidth": 2,
+    "semi": true
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@size-limit/preset-small-lib": "^4.8.0",
