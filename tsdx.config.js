@@ -9,7 +9,15 @@ const nodeResolve = require('@rollup/plugin-node-resolve').default;
 
 module.exports = {
   rollup(config, options) {
-    config.plugins = [url(), svgr(), scss(), postcss({ extract: false }), terser(), nodeResolve({ browser: true }), ...config.plugins];
+    config.plugins = [
+      url(),
+      svgr(),
+      scss(),
+      postcss({ extract: false }),
+      terser(),
+      nodeResolve({ browser: true }),
+      ...config.plugins
+    ];
     return config;
   },
 };
