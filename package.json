@@ -3,6 +3,8 @@
   "license": "MIT",
   "name": "@nybll/component-library",
   "author": "Jared Hill",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "module": "dist/component-library.esm.js",
   "size-limit": [
     {
@@ -14,8 +16,6 @@
       "limit": "10 KB"
     }
   ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -41,12 +41,6 @@
     "hooks": {
       "pre-commit": "tsdx lint"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

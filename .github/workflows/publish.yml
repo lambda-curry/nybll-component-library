@@ -1,0 +1,43 @@
+name: Publish GitHub package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+      - uses: actions/checkout@v2
+
+      # - name: Check if version has been updated
+      #   id: check
+      #   uses: EndBug/version-check@v1
+      #   with:
+      #     file-url: https://npm.pkg.github.com/@nybll/component-library/package.json
+      #     static-checking: localIsNew
+
+      - name: Set up the Node environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://npm.pkg.github.com'
+          # Defaults to the user or organization that owns the workflow file
+          scope: '@nybll' # We need to test to make sure this is right. We may not need this, if it defaults to '@nybll'
+
+      - name: Install & build the project
+        # if: steps.check.outputs.changed == 'true'
+        run: yarn && yarn build
+
+      - name: Publish
+        # if: steps.check.outputs.changed == 'true'
+        id: publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - if: steps.publish.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
