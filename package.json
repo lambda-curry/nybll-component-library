@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "license": "MIT",
-  "name": "@nybll/component-library",
+  "name": "@Lambda-Curry/nybll-component-library",
   "repository": "git://github.com/Lambda-Curry/nybll-component-library.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
