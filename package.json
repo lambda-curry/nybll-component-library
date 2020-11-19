@@ -6,16 +6,6 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/component-library.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/component-library.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/component-library.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "files": [
     "dist",
     "src"
