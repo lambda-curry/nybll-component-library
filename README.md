@@ -1,10 +1,22 @@
-# TSDX React w/ Storybook User Guide
+# Nybll Component Library
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+## Installation
 
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
+Before installing the Nybll component library in your project, you will need to add an `.npmrc` file to your project root with the following content:
 
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+```bash
+always-auth=true
+registry=https://registry.npmjs.org
+@lambda-curry:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken={token}
+```
+> In the code above, replace `{token}` with your own [personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
+
+Then you can install the library by running:
+
+```bash
+yarn add @lambda-curry/nybll-component-library
+```
 
 ## Commands
 
