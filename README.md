@@ -1,5 +1,7 @@
 # Nybll Component Library
 
+This project was bootstrapped with [TSDX](https://tsdx.io/).
+
 ## Installation
 
 Before installing the Nybll component library in your project, you will need to add an `.npmrc` file to your project root with the following content:
