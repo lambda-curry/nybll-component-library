@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as SvgIconGluten } from '../../icons/gluten.svg';
+import { ReactComponent as SvgIconGluten } from '../../assets/icons/gluten.svg';
 
 export const WeeklyMenuFooter = () => (
   <div className="nybll-weekly-menu-footer">

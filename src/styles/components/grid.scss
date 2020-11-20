@@ -1,0 +1,83 @@
+// --------------------
+// Variables
+// --------------------
+
+$grid-column-count: 12;
+
+// --------------------
+// Mixins
+// --------------------
+
+@mixin grid_columns($column-count) {
+  @for $i from 1 through $column-count {
+    .nybll-grid__col-#{$i} {
+      grid-column-end: span #{$i};
+    }
+
+    .nybll-grid__col-start-#{$i} {
+      grid-column-start: #{$i};
+    }
+  }
+
+  @each $key, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+      @for $i from 1 through $column-count {
+        .nybll-grid__col-#{$key}-#{$i} {
+          grid-column-end: span #{$i} !important;
+        }
+
+        .nybll-grid__col-#{$key}-start-#{$i} {
+          grid-column-start: #{$i} !important;
+        }
+      }
+    }
+  }
+}
+
+// --------------------
+// Rules
+// --------------------
+
+.nybll-grid {
+  display: grid;
+  grid-template-columns: repeat(#{$grid-column-count}, 1fr);
+  grid-template-rows: auto;
+  column-gap: 24px;
+  row-gap: 24px;
+
+  @media #{$mq-min-md} {
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+
+  @media #{$mq-min-lg} {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+
+  &--no-column-gap {
+    column-gap: 0;
+  }
+
+  &--no-row-gap {
+    row-gap: 0;
+  }
+
+  &-example-fill {
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--color-green-lighter);
+  }
+
+  &__col,
+  [class*='grid__col-xs-'],
+  [class*='grid__col-sm-'],
+  [class*='grid__col-md-'],
+  [class*='grid__col-lg-'],
+  [class*='grid__col-xl-'] {
+    grid-column: auto / span #{$grid-column-count};
+    max-width: 100%; // I'm gonna put this back in; I'm finding that without it, columns that contain sliders or even occasionally images will break outside of what should be the width of the column
+  }
+
+  @include grid_columns($grid-column-count);
+}

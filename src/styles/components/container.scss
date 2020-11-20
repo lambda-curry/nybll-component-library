@@ -1,0 +1,13 @@
+.nybll-container {
+  max-width: 1208px + (40px * 2);
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media #{$mq-min-md} {
+    padding: 0 32px;
+  }
+
+  @media #{$mq-min-lg} {
+    padding: 0 40px;
+  }
+}

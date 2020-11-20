@@ -1,0 +1,55 @@
+:root {
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+
+  --color-gray-dark: #{$color-gray-dark};
+  --color-gray: #{$color-gray};
+  --color-gray-light: #{$color-gray-light};
+
+  --color-green-dark: #{$color-green-dark};
+  --color-green: #{$color-green};
+  --color-green-light: #{$color-green-light};
+  --color-green-lighter: #{$color-green-lighter};
+  --color-green-lightest: #{$color-green-lightest};
+
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+
+  --font-family-serif: #{$font-family-serif};
+  --font-family-sans-serif: #{$font-family-sans-serif};
+
+  --base-unit: #{$base-unit};
+
+  --base-text-color: #{$base-text-color};
+  --base-font-size: #{$base-font-size};
+  --base-font-family: #{$base-font-family};
+  --base-line-height: #{$base-line-height};
+  --base-type-margin: #{$base-type-margin};
+
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-md: #{$font-size-md};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+
+  --font-size-sm-h1: #{$font-size-sm-h1};
+  --font-size-sm-h2: #{$font-size-sm-h2};
+  --font-size-sm-h3: #{$font-size-sm-h3};
+  --font-size-sm-h4: #{$font-size-sm-h4};
+  --font-size-sm-h5: #{$font-size-sm-h5};
+  --font-size-sm-h6: #{$font-size-sm-h6};
+
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h5: #{$font-size-h5};
+  --font-size-h6: #{$font-size-h6};
+
+  --font-weight-light: #{$font-weight-light};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+
+  --heading-line-height: #{$heading-line-height};
+  --heading-font-weight: #{$heading-font-weight};
+}
