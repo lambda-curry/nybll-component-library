@@ -12,9 +12,9 @@ jobs:
       - name: Checkout files
         uses: actions/checkout@v2
 
-      - name: Check if version has been updated
-        id: check
-        uses: EndBug/version-check@v1
+      # - name: Check if version has been updated
+      #   id: check
+      #   uses: EndBug/version-check@v1
 
       - name: Set up the Node environment
         uses: actions/setup-node@v1
@@ -25,11 +25,11 @@ jobs:
           scope: '@Lambda-Curry' # We need to test to make sure this is right. We may not need this, if it defaults to '@nybll'
 
       - name: Install & build the project
-        if: steps.check.outputs.changed == 'true'
+        # if: steps.check.outputs.changed == 'true'
         run: yarn && yarn build
 
       - name: Publish
-        if: steps.check.outputs.changed == 'true'
+        # if: steps.check.outputs.changed == 'true'
         id: publish
         run: npm publish
         env:
