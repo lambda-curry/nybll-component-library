@@ -1,0 +1,21 @@
+%base {
+  color: $base-text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  transition: 0.3s all;
+}
+
+%reset {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  letter-spacing: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

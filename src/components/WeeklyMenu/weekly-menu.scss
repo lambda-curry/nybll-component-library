@@ -1,3 +1,5 @@
+@import '../../styles/includes/variables.scss';
+
 $breakpoint-xs: 320px;
 $breakpoint-sm: 480px;
 $breakpoint-md: 768px;
@@ -16,6 +18,10 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 }
 
 .nybll-weekly-menu-widget-app {
+  .MuiTab-wrapper {
+    font-family: $base-font-family !important;
+  }
+
   .MuiTabs-root {
     margin: 0 calc(var(--base-unit) * -3);
 

@@ -16,7 +16,7 @@ export const WeeklyMenu: FC<WeeklyMenuProps> = ({ menu }) => {
   }));
 
   return (
-    <div className="nybll-weekly-menu-widget-app">
+    <div className="nybll-weekly-menu-widget-app nybll-typography">
       <Tabs tabs={tabs} variant="scrollable" />
       <WeeklyMenuFooter />
     </div>

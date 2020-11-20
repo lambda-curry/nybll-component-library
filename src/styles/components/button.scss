@@ -1,0 +1,46 @@
+a.nybll-button,
+button.nybll-button {
+  appearance: none;
+  border: solid 2px transparent;
+  border-radius: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: $font-size-sm;
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+  line-height: $heading-line-height;
+  max-width: 144px;
+  padding: 12px 48px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+
+  &--large {
+    max-width: 248px;
+  }
+
+  &--primary,
+  &--primary:visited {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-green-dark);
+    }
+  }
+
+  &--secondary,
+  &--secondary:visited {
+    color: var(--color-black);
+    border-color: var(--color-primary);
+    background-color: transparent;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-primary);
+    }
+  }
+}

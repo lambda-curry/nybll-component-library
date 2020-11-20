@@ -7,12 +7,15 @@ export default {
 };
 
 export const WeeklyMenuStory = () => {
+  const imageUrl = 'https://www.nybll.com/wp-content/plugins/nybll-weekly-menu/public/assets/imgs/menus/';
+  const orderLink = 'https://www.nybll.com/#meal-plans';
+
   const flexitarianMenu: Menu = {
     id: 'flexitarian',
     name: 'Flexitarian',
-    orderLink: '#',
+    orderLink,
     image: {
-      webp: '',
+      webp: `${imageUrl}weekly-menu-flexitarian.webp`,
       png: ''
     },
     items: [
@@ -34,9 +37,9 @@ export const WeeklyMenuStory = () => {
   const pescatarianMenu: Menu = {
     id: 'pescatarian',
     name: 'Pescatarian',
-    orderLink: '#',
+    orderLink,
     image: {
-      webp: '',
+      webp: `${imageUrl}weekly-menu-pescatarian.webp`,
       png: ''
     },
     items: [
@@ -58,9 +61,9 @@ export const WeeklyMenuStory = () => {
   const plantBasedMenu: Menu = {
     id: 'plant-based',
     name: 'Plant-Based',
-    orderLink: '#',
+    orderLink,
     image: {
-      webp: '',
+      webp: `${imageUrl}weekly-menu-plant-based.webp`,
       png: ''
     },
     items: [
@@ -82,9 +85,9 @@ export const WeeklyMenuStory = () => {
   const nonRedMeatMenu: Menu = {
     id: 'non-red-meat',
     name: 'Non-Red Meat',
-    orderLink: '#',
+    orderLink,
     image: {
-      webp: '',
+      webp: `${imageUrl}weekly-menu-non-red-meat.webp`,
       png: ''
     },
     items: [
@@ -105,7 +108,11 @@ export const WeeklyMenuStory = () => {
 
   const menus = [flexitarianMenu, pescatarianMenu, plantBasedMenu, nonRedMeatMenu];
 
-  return <WeeklyMenu menu={menus} />;
+  return (
+    <div className="nybll-container">
+      <WeeklyMenu menu={menus} />
+    </div>
+  );
 };
 
 WeeklyMenuStory.storyName = 'Default';

@@ -1,0 +1,15 @@
+.nybll-section {
+  padding: 32px 0;
+
+  @media #{$mq-min-sm} {
+    padding: 48px 0;
+  }
+
+  @media #{$mq-min-md} {
+    padding: 72px 0;
+  }
+
+  @media #{$mq-min-lg} {
+    padding: 104px 0;
+  }
+}

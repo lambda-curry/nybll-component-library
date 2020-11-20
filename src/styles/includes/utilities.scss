@@ -1,0 +1,219 @@
+// --------------------
+// Border Radius Utilities
+// --------------------
+
+.border-radius-50 {
+  border-radius: 50%;
+}
+
+// --------------------
+// Display Utilities
+// --------------------
+
+@mixin display_utilities() {
+  @each $key, $value in $breakpoints {
+    @media screen and (min-width: $value) {
+      .display-#{$key}-none {
+        display: none;
+      }
+
+      .display-#{$key}-block {
+        display: block;
+      }
+
+      .display-#{$key}-flex {
+        display: flex;
+      }
+
+      .display-#{$key}-initial {
+        display: initial;
+      }
+    }
+  }
+}
+
+@include display_utilities();
+
+// --------------------
+// Flex Utilities
+// --------------------
+
+.align-items {
+  &-center {
+    align-items: center;
+  }
+  &-flex-end {
+    align-items: flex-end;
+  }
+}
+
+.flex-direction {
+  &-column {
+    flex-direction: column;
+  }
+  &-column-reverse {
+    flex-direction: column-reverse;
+  }
+  &-row-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-w {
+  &-no-wrap {
+    flex-wrap: nowrap;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+  &-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.justify-content {
+  &-center {
+    justify-content: center;
+  }
+  &-flex-end {
+    justify-content: flex-end;
+  }
+  &-flex-start {
+    justify-content: flex-start;
+  }
+  &-space-around {
+    justify-content: space-around;
+  }
+  &-space-between {
+    justify-content: space-between;
+  }
+}
+
+// --------------------
+// Margin Utilities
+// --------------------
+
+.margin-0 {
+  margin: 0 !important;
+}
+.margin-0-auto {
+  margin: 0 auto !important;
+}
+
+@mixin margin_utilities($multiplier) {
+  $directions: (
+    'b': 'bottom',
+    'l': 'left',
+    'r': 'right',
+    't': 'top'
+  );
+
+  @for $i from 0 through $multiplier {
+    @each $key, $value in $directions {
+      .margin-#{$key}-#{$i} {
+        margin-#{$value}: $base-unit * $i !important;
+      }
+    }
+  }
+
+  @each $breakpoint-key, $breakpoint-value in $breakpoints {
+    @media screen and (min-width: #{$breakpoint-value}) {
+      @for $i from 0 through $multiplier {
+        @each $direction-key, $direction-value in $directions {
+          .margin-#{$direction-key}-#{$breakpoint-key}-#{$i} {
+            margin-#{$direction-value}: $base-unit * $i !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include margin_utilities(10);
+
+// --------------------
+// Max Width Utilities
+// --------------------
+
+@mixin max_width_utilities($percent-step) {
+  $steps: 100 / $percent-step;
+
+  @for $i from 1 through $steps {
+    .max-width-#{$i * $percent-step} {
+      max-width: #{$i * $percent-step}% !important;
+    }
+  }
+
+  @each $key, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+      @for $i from 1 through $steps {
+        .max-width-#{$key}-#{$i * $percent-step} {
+          max-width: #{$i * $percent-step}% !important;
+        }
+      }
+    }
+  }
+}
+
+@include max_width_utilities(10);
+
+// --------------------
+// Order Utilities
+// --------------------
+
+@mixin order_utilities() {
+  @each $key, $value in $breakpoints {
+    @for $i from 1 through 12 {
+      @media screen and (min-width: #{$value}) {
+        .order-#{$key}-#{$i} {
+          order: #{$i};
+        }
+      }
+    }
+  }
+}
+
+@include order_utilities();
+
+// --------------------
+// Padding Utilities
+// --------------------
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+@mixin padding_utilities($multiplier) {
+  $directions: (
+    'b': 'bottom',
+    'l': 'left',
+    'r': 'right',
+    't': 'top'
+  );
+
+  @for $i from 0 through $multiplier {
+    @each $key, $value in $directions {
+      .padding-#{$key}-#{$i} {
+        padding-#{$value}: $base-unit * $i !important;
+      }
+    }
+  }
+}
+
+@include padding_utilities(10);
+
+// --------------------
+// Padding Utilities
+// --------------------
+
+@mixin width_utilities($percent-step) {
+  $steps: 100 / $percent-step;
+
+  @for $i from 1 through $steps {
+    .width-#{$i * $percent-step} {
+      width: #{$i * $percent-step}% !important;
+    }
+  }
+}
+
+@include width_utilities(10);
