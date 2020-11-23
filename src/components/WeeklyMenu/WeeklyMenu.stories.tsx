@@ -88,7 +88,6 @@ export const WeeklyMenuStory = () => {
   const nonRedMeatMenu: Menu = {
     id: 'non-red-meat',
     name: 'Non-Red Meat',
-    // orderLink,
     image: `${imageUrl}weekly-menu-non-red-meat.webp`,
     dishes: [
       {
