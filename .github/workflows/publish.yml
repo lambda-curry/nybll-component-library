@@ -22,7 +22,7 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
-          scope: '@Lambda-Curry' # We need to test to make sure this is right. We may not need this, if it defaults to '@nybll'
+          scope: '@lambda-curry'
 
       - name: Install & build the project
         # if: steps.check.outputs.changed == 'true'
