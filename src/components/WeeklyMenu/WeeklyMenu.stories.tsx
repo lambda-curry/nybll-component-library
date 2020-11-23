@@ -14,22 +14,23 @@ export const WeeklyMenuStory = () => {
     id: 'flexitarian',
     name: 'Flexitarian',
     orderLink,
-    image: {
-      webp: `${imageUrl}weekly-menu-flexitarian.webp`,
-      png: ''
-    },
-    items: [
+    image: `${imageUrl}weekly-menu-flexitarian.webp`,
+    dishes: [
       {
-        type: 'entree',
-        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa'
+        category: 'Entrees',
+        items: [
+          {
+            type: 'Main Entree',
+            name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+          }
+        ]
       },
       {
-        type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette'
-      },
-      {
-        type: 'soup',
-        name: 'Curried Carrot and Apple Soup'
+        category: 'Salads & Soups',
+        items: [
+          { type: 'Composed Salad', name: 'Spinach Caraway Carrot Salad' },
+          { type: 'Soup', name: 'Black Bean + Soy Chorizo Soup' }
+        ]
       }
     ]
   };
@@ -38,22 +39,23 @@ export const WeeklyMenuStory = () => {
     id: 'pescatarian',
     name: 'Pescatarian',
     orderLink,
-    image: {
-      webp: `${imageUrl}weekly-menu-pescatarian.webp`,
-      png: ''
-    },
-    items: [
+    image: `${imageUrl}weekly-menu-pescatarian.webp`,
+    dishes: [
       {
-        type: 'entree',
-        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+        category: 'Entrees',
+        items: [
+          {
+            type: 'Main Entree',
+            name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+          }
+        ]
       },
       {
-        type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette'
-      },
-      {
-        type: 'soup',
-        name: 'Curried Carrot and Apple Soup'
+        category: 'Salads & Soups',
+        items: [
+          { type: 'Composed Salad', name: 'Spinach Caraway Carrot Salad' },
+          { type: 'Soup', name: 'Black Bean + Soy Chorizo Soup' }
+        ]
       }
     ]
   };
@@ -62,22 +64,23 @@ export const WeeklyMenuStory = () => {
     id: 'plant-based',
     name: 'Plant-Based',
     orderLink,
-    image: {
-      webp: `${imageUrl}weekly-menu-plant-based.webp`,
-      png: ''
-    },
-    items: [
+    image: `${imageUrl}weekly-menu-plant-based.webp`,
+    dishes: [
       {
-        type: 'entree',
-        name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+        category: 'Entrees',
+        items: [
+          {
+            type: 'Main Entree',
+            name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+          }
+        ]
       },
       {
-        type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette'
-      },
-      {
-        type: 'soup',
-        name: 'Curried Carrot and Apple Soup'
+        category: 'Salads & Soups',
+        items: [
+          { type: 'Composed Salad', name: 'Spinach Caraway Carrot Salad' },
+          { type: 'Soup', name: 'Black Bean + Soy Chorizo Soup' }
+        ]
       }
     ]
   };
@@ -86,22 +89,23 @@ export const WeeklyMenuStory = () => {
     id: 'non-red-meat',
     name: 'Non-Red Meat',
     orderLink,
-    image: {
-      webp: `${imageUrl}weekly-menu-non-red-meat.webp`,
-      png: ''
-    },
-    items: [
+    image: `${imageUrl}weekly-menu-non-red-meat.webp`,
+    dishes: [
       {
-        type: 'entree',
-        name: 'Chicken Fajita + Rice + Beans + Peppers and Salsa'
+        category: 'Entrees',
+        items: [
+          {
+            type: 'Main Entree',
+            name: 'Jackfruit Fajita + Rice + Beans + Peppers and Salsa'
+          }
+        ]
       },
       {
-        type: 'salad',
-        name: 'Garden Salad + Balsamic Vinaigrette'
-      },
-      {
-        type: 'soup',
-        name: 'Curried Carrot and Apple Soup'
+        category: 'Salads & Soups',
+        items: [
+          { type: 'Composed Salad', name: 'Spinach Caraway Carrot Salad' },
+          { type: 'Soup', name: 'Black Bean + Soy Chorizo Soup' }
+        ]
       }
     ]
   };
@@ -110,7 +114,7 @@ export const WeeklyMenuStory = () => {
 
   return (
     <div className="nybll-container">
-      <WeeklyMenu menu={menus} />
+      <WeeklyMenu menus={menus} />
     </div>
   );
 };

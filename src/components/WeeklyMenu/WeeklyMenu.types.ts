@@ -1,16 +1,21 @@
 export interface Dish {
-  type: 'entree' | 'soup' | 'salad';
+  type: string;
   name: string;
-  containsGluten?: boolean; // Note: I believe all food is now gluten-free
 }
 
 export interface Menu {
-  id: 'flexitarian' | 'pescatarian' | 'plant-based' | 'non-red-meat';
+  id: string;
   name: string;
-  items: Dish[];
-  image: {
-    webp: string;
-    png: string;
-  };
-  orderLink: string;
+  dishes: Array<{ category: string; items: Dish[] }>;
+  image: string;
+  orderLink?: string;
+}
+
+export interface MiseMenu {
+  type: string;
+  name: string;
+  image: string;
+  secondary_image: string;
+  allergens: string;
+  dishes: Dish[];
 }

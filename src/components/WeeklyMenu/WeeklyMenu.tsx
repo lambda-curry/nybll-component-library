@@ -6,11 +6,11 @@ import { Menu } from './WeeklyMenu.types';
 import './weekly-menu.scss';
 
 export interface WeeklyMenuProps {
-  menu: Menu[];
+  menus: Menu[];
 }
 
-export const WeeklyMenu: FC<WeeklyMenuProps> = ({ menu }) => {
-  const tabs = menu.map(item => ({
+export const WeeklyMenu: FC<WeeklyMenuProps> = ({ menus }) => {
+  const tabs = menus.map(item => ({
     label: item.name,
     render: <WeeklyMenuTabPanel id={item.id} menu={item} className="nybll-section padding-b-0" />
   }));
