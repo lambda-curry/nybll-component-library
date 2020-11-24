@@ -1,7 +1,7 @@
 import React from 'react';
 import { WeeklyMenu, Menu } from '.';
-import primaryImage from '../../assets/images/weekly-menu-pescatarian.jpg';
-import secondaryImage from '../../assets/images/weekly-menu-pescatarian-secondary.jpg';
+import primaryImage from '../../assets/images/weekly-menu-sample.jpg';
+import secondaryImage from '../../assets/images/weekly-menu-sample-image-secondary.jpg';
 
 export default {
   title: 'Components/WeeklyMenu',
@@ -9,7 +9,6 @@ export default {
 };
 
 export const WeeklyMenuStory = () => {
-  const imageUrl = 'https://www.nybll.com/wp-content/plugins/nybll-weekly-menu/public/assets/imgs/menus/';
   const orderLink = 'https://www.nybll.com/#meal-plans';
 
   const flexitarianMenu: Menu = {
@@ -42,7 +41,8 @@ export const WeeklyMenuStory = () => {
     id: 'pescatarian',
     name: 'Pescatarian',
     orderLink,
-    image: `${imageUrl}weekly-menu-pescatarian.webp`,
+    image: primaryImage,
+    secondary_image: secondaryImage,
     dishes: [
       {
         category: 'Entrees',
@@ -67,7 +67,8 @@ export const WeeklyMenuStory = () => {
     id: 'plant-based',
     name: 'Plant-Based',
     orderLink,
-    image: `${imageUrl}weekly-menu-plant-based.webp`,
+    image: primaryImage,
+    secondary_image: secondaryImage,
     dishes: [
       {
         category: 'Entrees',
@@ -91,7 +92,8 @@ export const WeeklyMenuStory = () => {
   const nonRedMeatMenu: Menu = {
     id: 'non-red-meat',
     name: 'Non-Red Meat',
-    image: `${imageUrl}weekly-menu-non-red-meat.webp`,
+    image: primaryImage,
+    secondary_image: secondaryImage,
     dishes: [
       {
         category: 'Entrees',
