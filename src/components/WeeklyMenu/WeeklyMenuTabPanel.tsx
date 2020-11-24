@@ -21,7 +21,7 @@ export const WeeklyMenuTabPanel: FC<WeeklyMenuTabPanelProps> = ({ className, id,
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
             <div>
               {menu.dishes.map(({ items, category }) => {
-                return <WeeklyMenuTabPanelContentList dishes={items} heading={category} />;
+                return <WeeklyMenuTabPanelContentList key={category} dishes={items} heading={category} />;
               })}
               {menu.orderLink && (
                 <a href={menu.orderLink} className="nybll-button nybll-button--primary nybll-button--large">
