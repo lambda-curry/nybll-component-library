@@ -20,7 +20,7 @@ export const WeeklyMenuTabPanel: FC<WeeklyMenuTabPanelProps> = ({ className, id,
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-5 align-items-center">
             <div
               className={classNames(`nybll-weekly-menu-image`, {
-                ['nybll-weekly-menu-image-has-secondary']: !!secondary_image
+                'nybll-weekly-menu-image-has-secondary': !!secondary_image
               })}
             >
               <img src={image} alt={name} className="nybll-weekly-menu-image-primary" />
