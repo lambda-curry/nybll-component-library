@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeeklyMenu, Menu } from '.';
-import primaryImage from '../../assets/images/weekly-menu-sample.jpg';
+import primaryImage from '../../assets/images/weekly-menu-sample-image.jpg';
 import secondaryImage from '../../assets/images/weekly-menu-sample-image-secondary.jpg';
 
 export default {

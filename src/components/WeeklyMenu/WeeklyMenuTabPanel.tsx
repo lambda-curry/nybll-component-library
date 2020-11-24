@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import { WeeklyMenuTabPanelContentList } from './WeeklyMenuTabPanelContentList';
 import { Menu } from './WeeklyMenu.types';
+import placeholderImage from '../../assets/images/weekly-menu-image-placeholder.png';
 
 export interface WeeklyMenuTabPanelProps {
   id: string;
@@ -23,9 +24,16 @@ export const WeeklyMenuTabPanel: FC<WeeklyMenuTabPanelProps> = ({ className, id,
                 'nybll-weekly-menu-image-has-secondary': !!secondary_image
               })}
             >
-              <img src={image} alt={name} className="nybll-weekly-menu-image-primary" />
+              <div className="nybll-weekly-menu-image-primary" style={{ backgroundImage: `url(${image})` }}>
+                <img src={placeholderImage} alt={`${name} primary`} />
+              </div>
               {secondary_image && (
-                <img src={secondary_image} alt={name} className="nybll-weekly-menu-image-secondary" />
+                <div
+                  className="nybll-weekly-menu-image-secondary"
+                  style={{ backgroundImage: `url(${secondary_image})` }}
+                >
+                  <img src={placeholderImage} alt={`${name} secondary`} />
+                </div>
               )}
             </div>
           </div>
