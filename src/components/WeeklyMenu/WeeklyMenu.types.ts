@@ -9,6 +9,7 @@ export interface Menu {
   name: string;
   dishes: Array<{ category: string; items: Dish[] }>;
   image: string;
+  secondary_image?: string;
   orderLink?: string;
 }
 

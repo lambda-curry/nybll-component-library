@@ -109,3 +109,31 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     margin-right: 8px;
   }
 }
+
+.nybll-weekly-menu-image {
+  position: relative;
+  display: block;
+  padding-bottom: 88%;
+
+  &-primary {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+  }
+
+  &-secondary {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 44%;
+  }
+
+  &-has-secondary {
+    .nybll-weekly-menu-image-primary {
+      max-width: 71%;
+    }
+  }
+}

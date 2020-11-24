@@ -1,5 +1,7 @@
 import React from 'react';
 import { WeeklyMenu, Menu } from '.';
+import primaryImage from '../../assets/images/weekly-menu-pescatarian.jpg';
+import secondaryImage from '../../assets/images/weekly-menu-pescatarian-secondary.jpg';
 
 export default {
   title: 'Components/WeeklyMenu',
@@ -14,7 +16,8 @@ export const WeeklyMenuStory = () => {
     id: 'flexitarian',
     name: 'Flexitarian',
     orderLink,
-    image: `${imageUrl}weekly-menu-flexitarian.webp`,
+    image: primaryImage,
+    secondary_image: secondaryImage,
     dishes: [
       {
         category: 'Entrees',
