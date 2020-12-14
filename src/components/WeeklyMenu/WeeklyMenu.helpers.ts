@@ -5,7 +5,7 @@ export const groupMenuDishesByType = (menus: MiseMenu[]): Menu[] =>
     const dishTypesCategoryMap = [
       {
         category: 'Entrees',
-        types: ['Main Entree', '2nd Entree', 'Vegan Entree', 'Vegetarian Entree']
+        types: ['Main Entree', '1st Entree', '2nd Entree', 'Vegan Entree', 'Vegetarian Entree']
       },
       {
         category: 'Salads and Soups',
