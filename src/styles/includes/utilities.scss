@@ -118,19 +118,19 @@
   @each $key, $value in $breakpoints {
     @media screen and (min-width: $value) {
       .display-#{$key}-none {
-        display: none;
+        display: none !important;
       }
 
       .display-#{$key}-block {
-        display: block;
+        display: block !important;
       }
 
       .display-#{$key}-flex {
-        display: flex;
+        display: flex !important;
       }
 
       .display-#{$key}-initial {
-        display: initial;
+        display: initial !important;
       }
     }
   }
