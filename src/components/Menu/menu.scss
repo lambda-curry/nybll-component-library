@@ -32,17 +32,19 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
   .MuiTabs-scrollButtonsDesktop {
     background-color: var(--primary-light-color);
+    border-bottom: 2px solid transparent;
     display: inline-flex !important;
-    transition: 0.1s all;
+    transition: 0.3s all;
 
     &.Mui-disabled {
-      color: var(--primary-light-color);
+      background-color: transparent;
+      border-bottom: 2px solid var(--color-green);
+      color: transparent;
       opacity: 1;
     }
   }
 
   .MuiTab-root {
-    border-top: 2px solid var(--primary-light-color);
     color: var(--color-gray);
     font-size: var(--base-font-size);
     font-weight: var(--font-weight-normal);
@@ -77,38 +79,50 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
   .MuiAppBar-root {
     align-self: flex-end;
-    max-width: 50%;
+
+    @media #{$mq-min-md} {
+      max-width: calc(50% - (var(--base-unit) * 2));
+    }
   }
 
   .MuiTab-root {
-    border-left: none;
-    border-top: 1px solid var(--color-gray);
-    border-bottom: 1px solid var(--color-gray);
-    border-right: 1px solid var(--color-gray);
-    color: var(--color-gray);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-normal);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+    border-top: 1px solid var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-light);
+    border-right: 1px solid var(--color-gray-light);
+    color: var(--color-black);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    margin-left: -1px;
     opacity: 1;
-    padding: 0 calc(var(--base-unit) * 2);
+    padding: var(--base-unit);
     text-transform: none;
     transition: 0.3s all;
 
     &:first-of-type {
-      border-left: 1px solid var(--color-gray);
-      border-radius: 4px;
+      border-left: 1px solid var(--color-gray-light);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-left: 0px;
     }
 
     &:last-of-type {
-      border-radius: 4px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
-    &:hover {
-      border: none;
-    }
-
+    &:hover,
     &.Mui-selected {
-      border: none;
+      border: 1px solid var(--color-green);
     }
+
+    &:hover + .MuiTab-root {
+      border-left: 1px solid rgba(0, 0, 0, 0);
+    }
+  }
+
+  .MuiTabs-indicator {
+    display: none !important;
   }
 }
 

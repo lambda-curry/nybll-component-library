@@ -20,6 +20,14 @@ export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, i
     <div key={id} className={className}>
       <div className="nybll-container padding-l-0 padding-r-0">
         <div className="nybll-grid">
+          <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
+            <p className="font-size-xs margin-t-1">
+              * Orders placed today will receive the current menu on the delivery date
+            </p>
+          </div>
+        </div>
+
+        <div className="nybll-grid">
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-5 align-items-center">
             <div
               className={classNames(`nybll-menu--image`, {
