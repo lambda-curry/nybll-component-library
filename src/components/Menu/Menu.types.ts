@@ -5,9 +5,10 @@ export interface Dish {
 }
 
 export interface Menu {
-  id: string;
   name: string;
-  dishes: Array<{ category: string; items: Dish[] }>;
+  type: string;
+  allergens: Array<string>;
+  dishes: Array<Dish>;
   image: string;
   secondary_image?: string;
   orderLink?: string;
@@ -18,17 +19,8 @@ export interface Diet {
   label: string;
   type: string;
   menus: {
-    current: {
-      start: string;
-      menu: Menu;
-    };
-    next: {
-      start: string;
-      menu: Menu;
-    };
-    previous: {
-      start: string;
-      menu: Menu;
-    };
+    current: Menu;
+    next: Menu;
+    previous: Menu;
   };
 }

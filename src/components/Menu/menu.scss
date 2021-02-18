@@ -67,7 +67,52 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
   }
 }
 
-.nybll-weekly-menu-tab-panel-content-list {
+.nybll-menu--diet-panel {
+  margin-top: calc(var(--base-unit) * 3);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .MuiAppBar-root {
+    align-self: flex-end;
+    max-width: 50%;
+  }
+
+  .MuiTab-root {
+    border-left: none;
+    border-top: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
+    color: var(--color-gray);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    opacity: 1;
+    padding: 0 calc(var(--base-unit) * 2);
+    text-transform: none;
+    transition: 0.3s all;
+
+    &:first-of-type {
+      border-left: 1px solid var(--color-gray);
+      border-radius: 4px;
+    }
+
+    &:last-of-type {
+      border-radius: 4px;
+    }
+
+    &:hover {
+      border: none;
+    }
+
+    &.Mui-selected {
+      border: none;
+    }
+  }
+}
+
+.nybll-menu--content-list {
   h6:first-of-type {
     margin-top: 0;
   }
@@ -82,11 +127,11 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
   }
 }
 
-.nybll-weekly-menu-footer {
+.nybll-menu--footer {
   align-items: center;
   display: flex;
 
-  .nybll-weekly-menu-footer-legend {
+  .nybll-menu--footer-legend {
     align-items: center;
     border: 1px solid var(--color-green-light);
     border-radius: 60px;
@@ -110,7 +155,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
   }
 }
 
-.nybll-weekly-menu-image {
+.nybll-menu--image {
   position: relative;
   display: block;
   padding-bottom: 100%;
@@ -146,7 +191,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
   &-has-secondary {
     padding-bottom: 100%;
 
-    .nybll-weekly-menu-image-primary {
+    .nybll-menu--image-primary {
       max-width: 71%;
       padding-bottom: 71%;
     }

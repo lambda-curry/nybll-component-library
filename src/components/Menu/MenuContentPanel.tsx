@@ -1,9 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import classNames from 'classnames';
-
 import { Menu } from './Menu.types';
 import placeholderImage from '../../assets/images/weekly-menu-image-placeholder.png';
-import { MenuContentList } from './index';
+// import { MenuContentList } from './index';
+import { categorizeDishesByType } from './Menu.helpers';
+import { MenuContentList } from './MenuContentList';
 
 export interface MenuContentPanelProps {
   id: string;
@@ -11,9 +12,9 @@ export interface MenuContentPanelProps {
   className?: string;
 }
 
-export const MenuContentPanel: FC<MenuContentPanelProps> = ({ className, id, menu }) => {
+export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, id, menu }) => {
   const { name, image, secondary_image, orderLink, dishes } = menu;
-  if (menu.dishes?.length < 1) return <>No dishes available...</>;
+  if (dishes?.length < 1) return <>No dishes available...</>;
 
   return (
     <div key={id} className={className}>
@@ -21,31 +22,28 @@ export const MenuContentPanel: FC<MenuContentPanelProps> = ({ className, id, men
         <div className="nybll-grid">
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-5 align-items-center">
             <div
-              className={classNames(`nybll-weekly-menu-image`, {
-                'nybll-weekly-menu-image-has-secondary': !!secondary_image
+              className={classNames(`nybll-menu--image`, {
+                'nybll-menu--image-has-secondary': !!secondary_image
               })}
             >
-              <div className="nybll-weekly-menu-image-primary" style={{ backgroundImage: `url(${image})` }}>
+              <div className="nybll-menu--image-primary" style={{ backgroundImage: `url(${image})` }}>
                 <img src={placeholderImage} alt={`${name} primary`} />
               </div>
               {secondary_image && (
-                <div
-                  className="nybll-weekly-menu-image-secondary"
-                  style={{ backgroundImage: `url(${secondary_image})` }}
-                >
+                <div className="nybll-menu--image-secondary" style={{ backgroundImage: `url(${secondary_image})` }}>
                   <img src={placeholderImage} alt={`${name} secondary`} />
                 </div>
               )}
             </div>
           </div>
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
-            <div>
-              {dishes.map(({ items, category }) => (
-                <MenuContentList key={category} dishes={items} heading={category} />
-              ))}
+            {categorizeDishesByType(dishes).map(([key, value]) => (
+              <MenuContentList heading={key} dishes={value} />
+            ))}
 
+            <div>
               {orderLink && (
-                <a href={menu.orderLink} className="nybll-button nybll-button--primary nybll-button--large">
+                <a href={orderLink} className="nybll-button nybll-button--primary nybll-button--large">
                   Order Now
                 </a>
               )}
