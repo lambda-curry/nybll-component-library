@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
-import { Menu } from './Menu.types';
+import { ContentList, Menu } from './Menu.types';
 import placeholderImage from '../../assets/images/weekly-menu-image-placeholder.png';
 // import { MenuContentList } from './index';
 import { categorizeDishesByType } from './Menu.helpers';
@@ -45,8 +45,8 @@ export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, i
             </div>
           </div>
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
-            {categorizeDishesByType(dishes).map(([key, value]) => (
-              <MenuContentList heading={key} dishes={value} />
+            {categorizeDishesByType(dishes).map(({ heading, dishes }: ContentList) => (
+              <MenuContentList heading={heading} dishes={dishes} />
             ))}
 
             <div>

@@ -1,4 +1,6 @@
-export const categorizeDishesByType = (dishes: Array<{ name: string; type: string }>): Array<{}> => {
+export const categorizeDishesByType = (
+  dishes: Array<{ name: string; type: string }>
+): Array<{ heading: string; dishes: Array<any> }> => {
   const dishTypesCategoryMap = [
     {
       category: 'Entrees',
@@ -26,7 +28,7 @@ export const categorizeDishesByType = (dishes: Array<{ name: string; type: strin
     }
   ];
 
-  let categorizedDishes: { [key: string]: Array<any> } = {};
+  let categorizedDishes: { [key: string]: Array<{}> } = {};
 
   dishes.map(({ name, type }) => {
     dishTypesCategoryMap.forEach(({ category, types }) => {
@@ -40,5 +42,11 @@ export const categorizeDishesByType = (dishes: Array<{ name: string; type: strin
     });
   });
 
-  return Object.entries(categorizedDishes);
+  const categorizedDishEntries = Object.entries(categorizedDishes);
+  const dishEntriesAsArray: Array<any> = categorizedDishEntries.map((item: Array<any>) => ({
+    heading: item[0],
+    dishes: item[1]
+  }));
+
+  return dishEntriesAsArray;
 };
