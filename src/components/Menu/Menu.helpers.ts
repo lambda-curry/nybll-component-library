@@ -43,7 +43,10 @@ export const categorizeDishesByType = (
   });
 
   const categorizedDishEntries = Object.entries(categorizedDishes);
-  const dishEntriesAsArray: Array<any> = categorizedDishEntries.map((item: Array<any>) => ({
+  const dishEntriesAsArray: Array<any> = categorizedDishEntries.map((item: Array<any>): {
+    heading: string;
+    dishes: Array<any>;
+  } => ({
     heading: item[0],
     dishes: item[1]
   }));
