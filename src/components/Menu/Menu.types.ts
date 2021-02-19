@@ -15,8 +15,8 @@ export interface Diet {
   label: string;
   type: string;
   menus: {
-    current: Menu;
-    next: Menu;
-    previous: Menu;
+    current?: Menu;
+    next?: Menu;
+    previous?: Menu;
   };
 }

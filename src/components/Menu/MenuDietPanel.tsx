@@ -11,9 +11,9 @@ export interface MenuDietPanelProps {
     previous: string;
   };
   menus: {
-    current: Menu;
-    next: Menu;
-    previous: Menu;
+    current?: Menu;
+    next?: Menu;
+    previous?: Menu;
   };
 }
 
@@ -44,7 +44,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
     {
       label: (
         <p className="font-weight-bold margin-0">
-          New Week
+          Next Week
           <br />
           <span className="font-weight-normal">{dates.next} delivery</span>
         </p>

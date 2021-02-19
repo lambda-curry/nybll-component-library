@@ -62,48 +62,7 @@ export const MenuStory = () => {
             ],
             allergens: ['fish', 'eggs', 'dairy', 'nuts', 'gluten', 'soy', 'tree nuts']
           },
-          next: {
-            type: 'Flexitarian',
-            name: ' Nybll Home Week 8 Winter Menu 3 Flexitarian',
-            image: 'https://admin.nybll.com/images/weekly-home-menu-default/flexitarian/primary_default_image.jpg',
-            secondary_image:
-              'https://admin.nybll.com/images/weekly-home-menu-default/flexitarian/secondary_default_image.jpg',
-            dishes: [
-              {
-                type: '1st Entree',
-                name: 'Herb Crusted Salmon + Confetti Quinoa + Kale'
-              },
-              {
-                type: '1st Entree',
-                name: 'Duck Confit + Crispy Potato Cakes + Charred Cabbage'
-              },
-              {
-                type: '1st Entree',
-                name: 'Chicken Parmesan + Alfredo Pasta + Herb Squash'
-              },
-              {
-                type: '1st Entree',
-                name: 'Chicken + Chorizo Paella + Sweet Pepper + Cauliflower'
-              },
-              {
-                type: '1st Entree',
-                name: 'Beef Stew + Roasted Root Vegetables + Green Beans'
-              },
-              {
-                type: '1st Entree',
-                name: 'Chicken Massaman Curry + Coconut Rice + Thai Vegetable'
-              },
-              {
-                type: '1st Entree',
-                name: 'Chimichurri Steak + Wild Rice + Asparagus'
-              },
-              {
-                type: '1st Entree',
-                name: 'Salad Nicoise with Seared Tuna'
-              }
-            ],
-            allergens: ['fish', 'eggs', 'soy', 'tree nuts']
-          },
+          next: undefined,
           previous: {
             type: 'Flexitarian',
             name: 'Nybll Home Week 6 Winter Menu 1 Flexitarian',
