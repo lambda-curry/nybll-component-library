@@ -81,7 +81,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     align-self: flex-end;
     width: 100%;
 
-    @media #{$mq-min-lg} {
+    @media #{$mq-min-xl} {
       max-width: calc(50% - (var(--base-unit) * 2));
     }
   }
