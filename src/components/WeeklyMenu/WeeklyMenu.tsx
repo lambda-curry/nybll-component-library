@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Tabs } from '@lambdacurry/component-library';
 import { WeeklyMenuFooter, WeeklyMenuTabPanel } from '.';
-import { Menu } from './WeeklyMenu.types';
+import { WeeklyMenu as WeeklyMenuType } from './WeeklyMenu.types';
 
 import './weekly-menu.scss';
 
 export interface WeeklyMenuProps {
-  menus: Menu[];
+  menus: WeeklyMenuType[];
 }
 
 export const WeeklyMenu: FC<WeeklyMenuProps> = ({ menus }) => {

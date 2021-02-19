@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { WeeklyMenuTabPanelContentList } from './WeeklyMenuTabPanelContentList';
-import { Menu } from './WeeklyMenu.types';
+import { WeeklyMenu } from './WeeklyMenu.types';
 import placeholderImage from '../../assets/images/weekly-menu-image-placeholder.png';
 
 export interface WeeklyMenuTabPanelProps {
   id: string;
-  menu: Menu;
+  menu: WeeklyMenu;
   className?: string;
 }
 

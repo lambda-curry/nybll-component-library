@@ -4,7 +4,7 @@ export interface Dish {
   containsGluten?: boolean;
 }
 
-export interface Menu {
+export interface WeeklyMenu {
   id: string;
   name: string;
   dishes: Array<{ category: string; items: Dish[] }>;

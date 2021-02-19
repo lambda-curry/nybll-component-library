@@ -1,5 +1,6 @@
 import React from 'react';
-import { WeeklyMenu, Menu } from '.';
+import { WeeklyMenu } from './';
+import { WeeklyMenu as WeeklyMenuType } from './WeeklyMenu.types';
 import primaryImage from '../../assets/images/weekly-menu-sample-image.jpg';
 import secondaryImage from '../../assets/images/weekly-menu-sample-image-secondary.jpg';
 
@@ -11,7 +12,7 @@ export default {
 export const WeeklyMenuStory = () => {
   const orderLink = 'https://www.nybll.com/#meal-plans';
 
-  const flexitarianMenu: Menu = {
+  const flexitarianMenu: WeeklyMenuType = {
     id: 'flexitarian',
     name: 'Flexitarian',
     orderLink,
@@ -37,7 +38,7 @@ export const WeeklyMenuStory = () => {
     ]
   };
 
-  const pescatarianMenu: Menu = {
+  const pescatarianMenu: WeeklyMenuType = {
     id: 'pescatarian',
     name: 'Pescatarian',
     orderLink,
@@ -63,7 +64,7 @@ export const WeeklyMenuStory = () => {
     ]
   };
 
-  const plantBasedMenu: Menu = {
+  const plantBasedMenu: WeeklyMenuType = {
     id: 'plant-based',
     name: 'Plant-Based',
     orderLink,
@@ -89,7 +90,7 @@ export const WeeklyMenuStory = () => {
     ]
   };
 
-  const nonRedMeatMenu: Menu = {
+  const nonRedMeatMenu: WeeklyMenuType = {
     id: 'non-red-meat',
     name: 'Non-Red Meat',
     image: primaryImage,
