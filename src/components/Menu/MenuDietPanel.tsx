@@ -26,7 +26,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
         <p className="font-weight-bold margin-0">
           Last Week
           <br />
-          <span className="font-weight-normal">{dates.previous} delivery</span>
+          <span className="font-size-xs font-weight-normal">{dates.previous} delivery</span>
         </p>
       ),
       render: <MenuContentPanel id="1" menu={previous} />
@@ -36,7 +36,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
         <p className="font-weight-bold margin-0">
           Current Menu
           <br />
-          <span className="font-weight-normal">{dates.current} delivery</span>
+          <span className="font-size-xs font-weight-normal">{dates.current} delivery</span>
         </p>
       ),
       render: <MenuContentPanel id="2" menu={current} />
@@ -46,7 +46,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
         <p className="font-weight-bold margin-0">
           Next Week
           <br />
-          <span className="font-weight-normal">{dates.next} delivery</span>
+          <span className="font-size-xs font-weight-normal">{dates.next} delivery</span>
         </p>
       ),
       render: <MenuContentPanel id="3" menu={next} />
