@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dish } from './Menu.types';
+import { Dish } from '../WeeklyMenu/WeeklyMenu.types';
 
 interface MenuContentListProps {
   dishes: Dish[];

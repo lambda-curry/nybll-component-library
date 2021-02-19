@@ -1,8 +1,4 @@
-export interface Dish {
-  type: string;
-  name: string;
-  containsGluten?: boolean;
-}
+import { Dish } from '../WeeklyMenu/WeeklyMenu.types';
 
 export interface Menu {
   name: string;
