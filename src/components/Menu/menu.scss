@@ -79,8 +79,9 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
   .MuiAppBar-root {
     align-self: flex-end;
+    width: 100%;
 
-    @media #{$mq-min-md} {
+    @media #{$mq-min-lg} {
       max-width: calc(50% - (var(--base-unit) * 2));
     }
   }
@@ -98,6 +99,10 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     padding: var(--base-unit);
     text-transform: none;
     transition: 0.3s all;
+
+    @media #{$mq-min-md} {
+      font-size: var(--font-size-sm);
+    }
 
     &:first-of-type {
       border-left: 1px solid var(--color-gray-light);
