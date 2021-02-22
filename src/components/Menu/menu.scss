@@ -94,14 +94,17 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     color: var(--color-black);
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-bold);
+    line-height: 18px;
     margin-left: -1px;
     opacity: 1;
-    padding: var(--base-unit);
+    padding: calc(var(--base-unit) / 2);
     text-transform: none;
     transition: 0.3s all;
 
     @media #{$mq-min-md} {
       font-size: var(--font-size-sm);
+      line-height: 24px;
+      padding: var(--base-unit);
     }
 
     &:first-of-type {
