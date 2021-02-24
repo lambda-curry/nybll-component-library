@@ -26,7 +26,7 @@ export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, i
 
           <div className="nybll-grid">
             <div className="nybll-grid__col-xs-12">
-              <p className="">We're sorry, but that menu is currently unavailable. Please check again later!</p>
+              <p className="margin-0">We're sorry, but that menu is currently unavailable. Please check again later!</p>
             </div>
           </div>
         </div>
