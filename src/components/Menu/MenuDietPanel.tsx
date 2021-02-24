@@ -52,7 +52,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
 
   return (
     <div className={className}>
-      <Tabs initialValue={1} tabs={tabs} />
+      <Tabs initialValue={1} tabs={tabs} variant="fullWidth" />
     </div>
   );
 };
