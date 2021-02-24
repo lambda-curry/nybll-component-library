@@ -18,6 +18,10 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 }
 
 .nybll-menu {
+  .MuiAppBar-root {
+    z-index: 50;
+  }
+
   .MuiTab-wrapper {
     font-family: $base-font-family !important;
   }
