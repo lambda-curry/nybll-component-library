@@ -5,6 +5,8 @@ import { Tabs } from '@lambdacurry/component-library';
 
 export interface MenuDietPanelProps {
   className?: string;
+  tabValue?: number;
+  setWeekTabsValue: (weekTabsValue: number) => void;
   dates: {
     current: string;
     next: string;
@@ -17,7 +19,13 @@ export interface MenuDietPanelProps {
   };
 }
 
-export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, menus }) => {
+export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({
+  className,
+  dates,
+  menus,
+  tabValue = 1,
+  setWeekTabsValue
+}) => {
   const { current, next, previous } = menus;
 
   const tabs = [
@@ -52,7 +60,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({ className, dates, 
 
   return (
     <div className={className}>
-      <Tabs initialValue={1} tabs={tabs} variant="fullWidth" />
+      <Tabs value={tabValue} onChange={(event, index) => setWeekTabsValue(index)} tabs={tabs} variant="fullWidth" />
     </div>
   );
 };
