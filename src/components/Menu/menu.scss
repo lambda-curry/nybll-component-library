@@ -91,6 +91,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     line-height: 18px;
+    min-width: unset;
     margin-left: -1px;
     opacity: 1;
     padding: calc(var(--base-unit) / 2);
