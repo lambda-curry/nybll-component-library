@@ -1787,10 +1787,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lambdacurry/component-library@0.7.25-beta.12":
-  version "0.7.25-beta.12"
-  resolved "https://registry.yarnpkg.com/@lambdacurry/component-library/-/component-library-0.7.25-beta.12.tgz#2ea845d576a3de1fc37cecc4de57f1ecb5da7b65"
-  integrity sha512-0sSBtINbtY3N+eRuZ6vkq+fjFAuWVzpb5NZC9KioPL9c28dO6psLUL5+O2Q0StRdpJCT01kxbhEQD0KNiTo6dQ==
+"@lambdacurry/component-library@0.7.25-beta.20":
+  version "0.7.25-beta.20"
+  resolved "https://registry.yarnpkg.com/@lambdacurry/component-library/-/component-library-0.7.25-beta.20.tgz#f652593cd03972a1c275a6f3a25bb02d7edef684"
+  integrity sha512-NJAcogaTfbITYNNohC2VNAahmlZaxeCej9cErs/clMyK6911T2gCpWvXL2Ix0ma5pEdkXrqxqsVnYUyzYwx+Fw==
   dependencies:
     "@babel/helper-builder-react-jsx-experimental" "^7.12.11"
     "@babel/helper-call-delegate" "^7.12.13"
@@ -1808,6 +1808,7 @@
     lodash "^4.17.20"
     luxon "^1.25.0"
     notistack "^1.0.3"
+    postcss-focus-visible "^5.0.0"
     react "16.13.1"
     react-dom "16.13.1"
     react-input-mask "^2.0.4"
@@ -11519,6 +11520,13 @@ postcss-flexbugs-fixes@^4.1.0:
   integrity sha512-9SiofaZ9CWpQWxOwRh1b/r85KD5y7GgvsNt1056k6OYLvWUun0czCvogfJgylC22uJTwW1KzY3Gz65NZRlvoiQ==
   dependencies:
     postcss "^7.0.26"
+
+postcss-focus-visible@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-focus-visible/-/postcss-focus-visible-5.0.0.tgz#61e0909244cd15b9075bd40a4f176aa4e2446dbc"
+  integrity sha512-KWMjuX+6Mbt7BvD7L9YETXXx8pmNSlT881Zdebbi5zLKdRIM0FIlwG87i/RXiwTf5nGJdaHA1KKsE6gW+O719A==
+  dependencies:
+    postcss "^7.0.27"
 
 postcss-import@^13.0.0:
   version "13.0.0"

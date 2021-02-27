@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { MenuContentPanel } from './index';
 import { Menu } from './Menu.types';
 import { Tabs } from '@lambdacurry/component-library';
@@ -60,7 +60,12 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({
 
   return (
     <div className={className}>
-      <Tabs value={tabValue} onChange={(event, index) => setWeekTabsValue(index)} tabs={tabs} variant="fullWidth" />
+      <Tabs
+        value={tabValue}
+        onChange={(e: ChangeEvent<{}>, index: any) => setWeekTabsValue(index)}
+        tabs={tabs}
+        variant="fullWidth"
+      />
     </div>
   );
 };
