@@ -1787,10 +1787,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@lambdacurry/component-library@0.7.25-beta.20":
-  version "0.7.25-beta.20"
-  resolved "https://registry.yarnpkg.com/@lambdacurry/component-library/-/component-library-0.7.25-beta.20.tgz#f652593cd03972a1c275a6f3a25bb02d7edef684"
-  integrity sha512-NJAcogaTfbITYNNohC2VNAahmlZaxeCej9cErs/clMyK6911T2gCpWvXL2Ix0ma5pEdkXrqxqsVnYUyzYwx+Fw==
+"@lambdacurry/component-library@0.7.25-beta.24":
+  version "0.7.25-beta.24"
+  resolved "https://registry.yarnpkg.com/@lambdacurry/component-library/-/component-library-0.7.25-beta.24.tgz#135a97162adf8dba8041f70bcbd0501cc2b9eba7"
+  integrity sha512-HV9e4cCvIYhwBdBMUrROtWI2juAJekwJdtDwU7zh/QT+W5oFSmiZZU0O+qKSyMOpuyLMD8Vnf4qE5JW1snPlRw==
   dependencies:
     "@babel/helper-builder-react-jsx-experimental" "^7.12.11"
     "@babel/helper-call-delegate" "^7.12.13"
