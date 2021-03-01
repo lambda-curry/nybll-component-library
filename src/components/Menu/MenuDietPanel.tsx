@@ -60,12 +60,7 @@ export const MenuDietPanel: React.FC<MenuDietPanelProps> = ({
 
   return (
     <div className={className}>
-      <Tabs
-        onChange={(event: React.ChangeEvent<any>, index: any) => setWeekTabsValue(index)}
-        tabs={tabs}
-        value={tabValue}
-        variant="fullWidth"
-      />
+      <Tabs onChange={({}, index: any) => setWeekTabsValue(index)} tabs={tabs} value={tabValue} variant="fullWidth" />
     </div>
   );
 };
