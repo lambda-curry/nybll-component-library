@@ -30,7 +30,7 @@ export const categorizeDishesByType = (
 
   let categorizedDishes: { [key: string]: Array<{}> } = {};
 
-  dishes.map(({ name, type }) => {
+  dishes.forEach(({ name, type }) => {
     dishTypesCategoryMap.forEach(({ category, types }) => {
       if (types.includes(type)) {
         if (Object.keys(categorizedDishes).includes(category)) {
