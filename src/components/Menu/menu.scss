@@ -12,12 +12,10 @@ $mq-min-md: '(min-width: #{$breakpoint-md})';
 $mq-min-lg: '(min-width: #{$breakpoint-lg})';
 $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
-:root {
-  --primary-default-color: var(--color-green);
-  --primary-light-color: var(--color-green-lighter);
-}
-
 .nybll-menu {
+  $primary-default-color: color('color-green');
+  $primary-light-color: color('color-green-lighter');
+
   .MuiAppBar-root {
     z-index: 50;
   }
@@ -27,21 +25,21 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
   }
 
   .MuiTabs-scrollButtonsDesktop {
-    background-color: var(--primary-light-color);
+    background-color: $primary-light-color;
     border-bottom: 2px solid transparent;
     display: inline-flex !important;
     transition: 0.3s all;
 
     &.Mui-disabled {
       background-color: transparent;
-      border-bottom: 2px solid var(--color-green);
+      border-bottom: 2px solid color('color-green');
       color: transparent;
       opacity: 1;
     }
   }
 
   .MuiTab-root {
-    color: var(--color-gray);
+    color: color('color-gray');
     font-size: var(--base-font-size);
     font-weight: var(--font-weight-normal);
     opacity: 1;
@@ -55,11 +53,11 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     }
 
     &:hover {
-      border-bottom-color: var(--primary-default-color);
+      border-bottom-color: $primary-default-color;
     }
 
     &.Mui-selected {
-      color: var(--color-black);
+      color: color('color-black');
       font-weight: var(--font-weight-bold);
     }
   }
@@ -84,10 +82,10 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
   .MuiTab-root {
     border-left: 1px solid rgba(0, 0, 0, 0);
-    border-top: 1px solid var(--color-gray-light);
-    border-bottom: 1px solid var(--color-gray-light);
-    border-right: 1px solid var(--color-gray-light);
-    color: var(--color-black);
+    border-top: 1px solid color('color-gray-light');
+    border-bottom: 1px solid color('color-gray-light');
+    border-right: 1px solid color('color-gray-light');
+    color: color('color-black');
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     line-height: 18px;
@@ -111,7 +109,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     }
 
     &:first-of-type {
-      border-left: 1px solid var(--color-gray-light);
+      border-left: 1px solid color('color-gray-light');
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       margin-left: 0px;
@@ -124,7 +122,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
     &:hover,
     &.Mui-selected {
-      border: 1px solid var(--color-green);
+      border: 1px solid color('color-green');
     }
 
     &:hover + .MuiTab-root {
@@ -162,7 +160,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
   .nybll-menu--footer-legend {
     align-items: center;
-    border: 1px solid var(--color-green-light);
+    border: 1px solid color('color-green-light');
     border-radius: 60px;
     box-sizing: initial;
     display: flex;
