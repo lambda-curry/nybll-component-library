@@ -67,7 +67,7 @@ export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, i
           </div>
           <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
             {categorizeDishesByType(dishes).map(({ heading, dishes }) => (
-              <MenuContentList heading={heading} dishes={dishes} />
+              <MenuContentList key={heading} heading={heading} dishes={dishes} />
             ))}
 
             <div>

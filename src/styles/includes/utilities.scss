@@ -3,31 +3,31 @@
 // --------------------
 
 .background-color-green {
-  background-color: var(--color-green);
+  background-color: color('green');
 }
 
 .background-color-green-light {
-  background-color: var(--color-green-light);
+  background-color: color('green-light');
 }
 
 .background-color-green-lighter {
-  background-color: var(--color-green-lighter);
+  background-color: color('green-lighter');
 }
 
 .background-color-green-lightest {
-  background-color: var(--color-green-lightest);
+  background-color: color('green-lightest');
 }
 
 .background-color-green-dark {
-  background-color: var(--color-green-dark);
+  background-color: color('green-dark');
 }
 
 .background-color-blue {
-  background-color: var(--color-blue);
+  background-color: color('blue');
 }
 
 .background-color-pink {
-  background-color: var(--color-pink);
+  background-color: color('pink');
 }
 
 // --------------------
@@ -35,23 +35,23 @@
 // --------------------
 
 .border-green {
-  border: 2px solid var(--color-green);
+  border: 2px solid color('green');
 }
 
 .border-green-light {
-  border: 2px solid var(--color-green-light);
+  border: 2px solid color('green-light');
 }
 
 .border-green-lighter {
-  border: 2px solid var(--color-green-lighter);
+  border: 2px solid color('green-lighter');
 }
 
 .border-green-lightest {
-  border: 2px solid var(--color-green-lightest);
+  border: 2px solid color('green-lightest');
 }
 
 .border-green-dark {
-  border: 2px solid var(--color-green-dark);
+  border: 2px solid color('green-dark');
 }
 
 // --------------------
@@ -67,47 +67,47 @@
 // --------------------
 
 .color-black {
-  color: var(--color-black) !important;
+  color: color('black') !important;
 }
 .color-white {
-  color: var(--color-white) !important;
+  color: color('white') !important;
 }
 
 .color-gray-dark {
-  color: var(--color-gray-dark) !important;
+  color: color('gray-dark') !important;
 }
 .color-gray {
-  color: var(--color-gray) !important;
+  color: color('gray') !important;
 }
 .color-gray-light {
-  color: var(--color-gray-light) !important;
+  color: color('gray-light') !important;
 }
 
 .color-green-dark {
-  color: var(--color-green-dark) !important;
+  color: color('green-dark') !important;
 }
 .color-green {
-  color: var(--color-green) !important;
+  color: color('green') !important;
 }
 .color-green-light {
-  color: var(--color-green-light) !important;
+  color: color('green-light') !important;
 }
 .color-green-lighter {
-  color: var(--color-green-lighter) !important;
+  color: color('green-lighter') !important;
 }
 .color-green-lighest {
-  color: var(--color-green-lightest) !important;
+  color: color('green-lightest') !important;
 }
 
 .color-blue {
-  color: var(--color-blue) !important;
+  color: color('blue') !important;
 }
 
 .color-primary {
-  color: var(--color-primary) !important;
+  color: color('primary') !important;
 }
 .color-secondary {
-  color: var(--color-secondary) !important;
+  color: color('secondary') !important;
 }
 
 // --------------------
@@ -441,7 +441,7 @@
   position: relative;
 
   &::before {
-    background-color: var(--color-green-lightest);
+    background-color: color('green-lightest');
     content: '';
     height: 24px;
     left: 16px;

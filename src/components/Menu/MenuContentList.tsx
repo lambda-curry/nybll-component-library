@@ -15,7 +15,11 @@ export const MenuContentList: React.FC<MenuContentListProps> = ({ dishes, headin
 
       <ul className="padding-l-0">
         {dishes.map(dish => {
-          return <li className="nybll-menu--content-list-item">{dish}</li>;
+          return (
+            <li key={dish.name} className="nybll-menu--content-list-item">
+              {dish}
+            </li>
+          );
         })}
       </ul>
     </div>
