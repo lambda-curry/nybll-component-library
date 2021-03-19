@@ -7,5 +7,5 @@
     @return '';
   }
 
-  @return rgba(var(--#{$color}), #{$alpha});
+  @return rgba(var(--color-#{$color}), #{$alpha});
 }

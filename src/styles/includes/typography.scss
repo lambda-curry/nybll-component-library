@@ -82,7 +82,7 @@
   }
 
   a {
-    color: color('color-green-dark');
+    color: color('green-dark');
     text-decoration: underline;
   }
 
@@ -113,7 +113,7 @@
   }
 
   hr {
-    border-top: solid 1px color('color-gray-light');
+    border-top: solid 1px color('gray-light');
     margin: $base-type-margin 0;
   }
 }

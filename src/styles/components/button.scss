@@ -23,24 +23,24 @@ button.nybll-button {
 
   &--primary,
   &--primary:visited {
-    color: color('color-white');
-    background-color: color('color-primary');
+    color: color('white');
+    background-color: color('primary');
 
     &:hover {
-      color: color('color-white');
-      background-color: color('color-green-dark');
+      color: color('white');
+      background-color: color('green-dark');
     }
   }
 
   &--secondary,
   &--secondary:visited {
-    color: color('color-black');
-    border-color: color('color-primary');
+    color: color('black');
+    border-color: color('primary');
     background-color: transparent;
 
     &:hover {
-      color: color('color-white');
-      background-color: color('color-primary');
+      color: color('white');
+      background-color: color('primary');
     }
   }
 }
