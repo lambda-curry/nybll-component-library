@@ -1,8 +1,4 @@
-export interface Dish {
-  type: string;
-  name: string;
-  containsGluten?: boolean;
-}
+import { Dish } from '../../types/shared.types';
 
 export interface WeeklyMenu {
   id: string;
