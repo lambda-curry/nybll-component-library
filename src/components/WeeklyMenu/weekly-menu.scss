@@ -1,0 +1,153 @@
+@import '../../styles/includes/functions.scss';
+@import '../../styles/includes/variables.scss';
+
+$breakpoint-xs: 320px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1240px;
+
+$mq-min-xs: '(min-width: #{$breakpoint-xs})';
+$mq-min-sm: '(min-width: #{$breakpoint-sm})';
+$mq-min-md: '(min-width: #{$breakpoint-md})';
+$mq-min-lg: '(min-width: #{$breakpoint-lg})';
+$mq-min-xl: '(min-width: #{$breakpoint-xl})';
+
+.nybll-weekly-menu-widget-app {
+  --lc-color-primary: #{$color-green};
+  --lc-color-primary-light: #{$color-green-lighter};
+
+  .MuiTab-wrapper {
+    font-family: $base-font-family !important;
+  }
+
+  .MuiTabs-root {
+    margin: 0 calc(var(--base-unit) * -3);
+
+    @media #{$mq-min-md} {
+      margin: 0;
+    }
+  }
+
+  .MuiTabs-scrollButtonsDesktop {
+    background-color: color('green-lighter');
+    display: inline-flex !important;
+    transition: 0.1s all;
+
+    &.Mui-disabled {
+      color: color('green-lighter');
+      opacity: 1;
+    }
+  }
+
+  .MuiTab-root {
+    border-top: 2px solid color('green-lighter');
+    color: color('gray');
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-normal);
+    opacity: 1;
+    padding: 0 calc(var(--base-unit) * 3);
+    text-transform: uppercase;
+    transition: 0.3s all;
+
+    @media #{$mq-min-md} {
+      border-top-color: rgba(0, 0, 0, 0);
+      flex: 1;
+    }
+
+    &:hover {
+      border-bottom-color: color('green');
+    }
+
+    &.Mui-selected {
+      color: color('black');
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+.nybll-weekly-menu-tab-panel-content-list {
+  h6:first-of-type {
+    margin-top: 0;
+  }
+
+  ul li {
+    list-style: none;
+
+    &::before {
+      content: '•';
+      margin-right: calc(var(--base-unit) * 2);
+    }
+  }
+}
+
+.nybll-weekly-menu-footer {
+  align-items: center;
+  display: flex;
+
+  .nybll-weekly-menu-footer-legend {
+    align-items: center;
+    border: 1px solid color('green-light');
+    border-radius: 60px;
+    box-sizing: initial;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    max-width: 188px;
+    padding: 10px 16px;
+    width: 100%;
+  }
+
+  p {
+    line-height: 14px;
+    margin: 0;
+  }
+
+  svg {
+    height: 16px;
+    margin-right: 8px;
+  }
+}
+
+.nybll-weekly-menu-image {
+  position: relative;
+  display: block;
+  padding-bottom: 100%;
+
+  img {
+    display: block;
+  }
+
+  &-primary,
+  &-secondary {
+    position: absolute;
+    background: no-repeat center center;
+    background-size: cover;
+    width: 100%;
+  }
+
+  &-primary {
+    z-index: 1;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    padding-bottom: 100%;
+  }
+
+  &-secondary {
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    max-width: 44%;
+    padding-bottom: 44%;
+  }
+
+  &-has-secondary {
+    padding-bottom: 100%;
+
+    .nybll-weekly-menu-image-primary {
+      max-width: 71%;
+      padding-bottom: 71%;
+    }
+  }
+}
