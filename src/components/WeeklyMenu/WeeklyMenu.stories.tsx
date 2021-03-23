@@ -1,6 +1,6 @@
 import React from 'react';
 import { WeeklyMenu } from './';
-import { WeeklyMenu as WeeklyMenuType } from './WeeklyMenu.types';
+import { WeeklyMenuType } from '../../types/WeeklyMenu.types';
 import primaryImage from '../../assets/images/weekly-menu-sample-image.jpg';
 import secondaryImage from '../../assets/images/weekly-menu-sample-image-secondary.jpg';
 

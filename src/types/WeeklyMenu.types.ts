@@ -1,6 +1,6 @@
-import { Dish } from '../../types/shared.types';
+import { Dish } from './shared.types';
 
-export interface WeeklyMenu {
+export interface WeeklyMenuType {
   id: string;
   name: string;
   dishes: Array<{ category: string; items: Dish[] }>;

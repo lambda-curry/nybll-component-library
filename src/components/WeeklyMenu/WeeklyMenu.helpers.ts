@@ -1,7 +1,6 @@
-import { MiseMenu } from '.';
-import { WeeklyMenu } from './WeeklyMenu.types';
+import { MiseMenu, WeeklyMenuType } from '../../types/types';
 
-export const groupMenuDishesByType = (menus: MiseMenu[]): WeeklyMenu[] =>
+export const groupMenuDishesByType = (menus: MiseMenu[]): WeeklyMenuType[] =>
   menus.map(({ dishes, type, ...menu }) => {
     const dishTypesCategoryMap = [
       {

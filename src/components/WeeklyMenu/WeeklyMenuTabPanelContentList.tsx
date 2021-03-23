@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ReactComponent as SvgIconGluten } from '../../assets/icons/gluten.svg';
-import { Dish } from './WeeklyMenu.types';
+import { Dish } from '../../types/types';
 
 interface WeeklyMenuTabPanelContentListProps {
   dishes: Dish[];

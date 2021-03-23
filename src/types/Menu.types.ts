@@ -1,6 +1,6 @@
-import { Dish } from '../../types/shared.types';
+import { Dish } from '..';
 
-export interface Menu {
+export interface MenuType {
   name: string;
   type: string;
   allergens: Array<string>;
@@ -15,8 +15,8 @@ export interface Diet {
   label: string;
   type: string;
   menus: {
-    current?: Menu;
-    next?: Menu;
-    previous?: Menu;
+    current?: MenuType;
+    next?: MenuType;
+    previous?: MenuType;
   };
 }

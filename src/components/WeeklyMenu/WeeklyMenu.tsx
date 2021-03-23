@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Tabs } from '@lambdacurry/component-library';
 import { WeeklyMenuFooter, WeeklyMenuTabPanel } from '.';
-import { WeeklyMenu as WeeklyMenuType } from './WeeklyMenu.types';
+import { WeeklyMenuType } from '../../types/WeeklyMenu.types';
 
 import './weekly-menu.scss';
 

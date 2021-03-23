@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Menu } from './Menu.types';
 import placeholderImage from '../../assets/images/weekly-menu-image-placeholder.png';
 import { categorizeDishesByType } from './Menu.helpers';
 import { MenuContentList } from './MenuContentList';
+import { MenuType } from '../../types/types';
 
 export interface MenuContentPanelProps {
   id: string;
-  menu?: Menu;
+  menu?: MenuType;
   className?: string;
 }
 

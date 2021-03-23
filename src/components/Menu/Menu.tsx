@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Diet } from './Menu.types';
+import { Diet } from '../..';
 import { Tabs } from '@lambdacurry/component-library';
 import { MenuDietPanel } from './index';
 import './menu.scss';

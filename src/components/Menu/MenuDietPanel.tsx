@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuContentPanel } from './index';
-import { Menu } from './Menu.types';
 import { Tabs } from '@lambdacurry/component-library';
+import { MenuType } from '../../types/types';
 
 export interface MenuDietPanelProps {
   className?: string;
@@ -13,9 +13,9 @@ export interface MenuDietPanelProps {
     previous: string;
   };
   menus: {
-    current?: Menu;
-    next?: Menu;
-    previous?: Menu;
+    current?: MenuType;
+    next?: MenuType;
+    previous?: MenuType;
   };
 }
 
