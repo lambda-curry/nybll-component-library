@@ -27,23 +27,22 @@ $mq-max-xl: '(max-width: #{map-get($breakpoints, "xl")})';
 // --------------------
 
 $color-black: hexToRGB(#262422);
-$color-white: hexToRGB(#fff);
+$color-white: hexToRGB(#fdfdfd);
 
-$color-gray-dark: hexToRGB(#424242);
-$color-gray: hexToRGB(#747474);
+$color-gray-dark: hexToRGB(#2c2d2c);
+$color-gray: hexToRGB(#484e4a);
 $color-gray-light: hexToRGB(#e4e4e4);
+$color-gray-lighter: hexToRGB(#f7f7f7);
 
 $color-green-dark: hexToRGB(#75a101);
-$color-green: hexToRGB(#95be2a);
-$color-green-light: hexToRGB(
-  #dbe3c2
-); // Note to Jared => I added this color specifically for the menu legend, which had a distinct hex value in Figma and I know you weren't really happy with any of the previously set colors on our last call; let me know if you want me to hexToRGB(remove this).
-$color-green-lighter: hexToRGB(#e2f2b8);
-$color-green-lightest: hexToRGB(#f4f8e9);
+$color-green: hexToRGB(#55a883);
+$color-green-light: hexToRGB(#dbe3c2);
+$color-green-lighter: hexToRGB(#a9d9c3);
+$color-green-lightest: hexToRGB(#ecf5f1);
 
 $color-blue: hexToRGB(#021f59);
-
 $color-pink: hexToRGB(#f3cfd3);
+$color-yellow: hexToRGB(#ffeb9d);
 
 $color-primary: $color-green;
 $color-secondary: $color-green-lightest;
