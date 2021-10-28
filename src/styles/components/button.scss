@@ -35,7 +35,7 @@ button.nybll-button {
   &--secondary,
   &--secondary:visited {
     color: color('black');
-    border-color: var(--color-green);
+    border-color: rgba(var(--color-green), 1);
     background-color: transparent;
 
     &:hover {
