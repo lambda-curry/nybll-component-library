@@ -9,16 +9,13 @@ button.nybll-button {
   font-family: $font-family-sans-serif;
   font-weight: 700;
   line-height: $heading-line-height;
+  max-width: 144px;
   padding: 12px 48px;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   transition: all 0.15s ease-in-out;
   text-decoration: none;
-
-  @media #{$mq-min-sm} {
-    max-width: 144px;
-  }
 
   @media #{$mq-min-md} {
     font-size: $font-size-sm;
@@ -43,6 +40,10 @@ button.nybll-button {
       color: color('white');
       background-color: color('green-dark');
     }
+
+    @media #{$mq-max-sm} {
+      max-width: unset;
+    }
   }
 
   &--secondary,
@@ -50,7 +51,6 @@ button.nybll-button {
     color: color('black');
     background-color: transparent;
     border-color: rgba(var(--color-green), 1);
-    max-width: 144px;
 
     &:hover {
       color: color('white');
