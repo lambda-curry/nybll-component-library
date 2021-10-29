@@ -22,9 +22,7 @@ button.nybll-button {
   }
 
   &--large {
-    @media #{$mq-min-sm} {
-      max-width: 181px;
-    }
+    max-width: 181px;
 
     @media #{$mq-min-md} {
       max-width: 248px;
