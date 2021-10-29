@@ -48,8 +48,9 @@ button.nybll-button {
   &--secondary,
   &--secondary:visited {
     color: color('black');
-    border-color: rgba(var(--color-green), 1);
     background-color: transparent;
+    border-color: rgba(var(--color-green), 1);
+    max-width: 144px;
 
     &:hover {
       color: color('white');
