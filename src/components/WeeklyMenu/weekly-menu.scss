@@ -60,6 +60,7 @@ $mq-min-xl: '(min-width: #{$breakpoint-xl})';
     }
 
     &.Mui-selected {
+      background-color: rgba(var(--color-green-lightest), 1);
       color: color('black');
       font-weight: var(--font-weight-bold);
     }
