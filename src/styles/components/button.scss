@@ -5,11 +5,10 @@ button.nybll-button {
   border-radius: 100px;
   box-sizing: border-box;
   display: inline-block;
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
   font-family: $font-family-sans-serif;
   font-weight: 700;
   line-height: $heading-line-height;
-  max-width: 144px;
   padding: 12px 48px;
   text-align: center;
   text-transform: uppercase;
@@ -17,8 +16,22 @@ button.nybll-button {
   transition: all 0.15s ease-in-out;
   text-decoration: none;
 
+  @media #{$mq-min-sm} {
+    max-width: 144px;
+  }
+
+  @media #{$mq-min-md} {
+    font-size: $font-size-sm;
+  }
+
   &--large {
-    max-width: 248px;
+    @media #{$mq-min-sm} {
+      max-width: 181px;
+    }
+
+    @media #{$mq-min-md} {
+      max-width: 248px;
+    }
   }
 
   &--primary,
