@@ -26,17 +26,17 @@ $mq-max-xl: '(max-width: #{map-get($breakpoints, "xl")})';
 // Colors
 // --------------------
 
-$color-black: hexToRGB(#262422);
+$color-black: hexToRGB(#2c2d2c);
 $color-white: hexToRGB(#fdfdfd);
 
-$color-gray-dark: hexToRGB(#2c2d2c);
+$color-gray-dark: hexToRGB(#484e4a);
 $color-gray: hexToRGB(#484e4a);
 $color-gray-light: hexToRGB(#e4e4e4);
 $color-gray-lighter: hexToRGB(#f7f7f7);
 
-$color-green-dark: hexToRGB(#31664e);
-$color-green: hexToRGB(#55a883);
-$color-green-light: hexToRGB(#dbe3c2);
+$color-green-dark: hexToRGB(#00412f);
+$color-green: hexToRGB(#025940);
+$color-green-light: hexToRGB(#dcf4e6);
 $color-green-lighter: hexToRGB(#a9d9c3);
 $color-green-lightest: hexToRGB(#ecf5f1);
 
@@ -59,6 +59,9 @@ $base-unit: 8px;
 
 $font-family-serif: freight-macro-pro, serif;
 $font-family-sans-serif: 'Roboto', sans-serif;
+
+$font-family-primary: 'brother-1816', sans-serif;
+$font-family-secondary: 'Quicksand', sans-serif;
 
 $base-text-color: color('black');
 $base-font-size: 16px;

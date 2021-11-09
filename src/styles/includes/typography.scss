@@ -17,8 +17,8 @@
   .h5,
   h6,
   .h6 {
+    font-family: $font-family-primary;
     font-weight: $heading-font-weight;
-    font-family: $font-family-serif;
     line-height: $heading-line-height;
     margin: $base-type-margin 0;
 
