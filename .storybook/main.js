@@ -26,7 +26,7 @@ module.exports = {
   ],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
-    check: true, // type-check stories during Storybook build
+    check: true // type-check stories during Storybook build
   },
   webpackFinal: async config => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
@@ -63,6 +63,13 @@ module.exports = {
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       include: [path.resolve(__dirname, '../src'), __dirname]
+    });
+
+    // Ignore .mjs files https://github.com/treshugart/react-shade/issues/8
+    config.module.rules.push({
+      type: 'javascript/auto',
+      test: /\.mjs$/,
+      use: []
     });
 
     // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
