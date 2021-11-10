@@ -13,6 +13,10 @@
     font-family: $base-font-family !important;
   }
 
+  .MuiTabs-root {
+    margin: 0 -16px;
+  }
+
   .MuiTabs-scrollButtonsDesktop {
     background-color: color('green-lighter');
     border-bottom: 2px solid transparent;
@@ -23,6 +27,7 @@
       background-color: transparent;
       border-bottom: 2px solid color('green');
       color: transparent;
+      display: none !important;
       opacity: 1;
     }
   }
@@ -129,11 +134,14 @@
 }
 
 .nybll-menu--content-list {
-  h6:first-of-type {
+  h6 {
+    font-family: $font-family-secondary !important;
     margin-top: 0;
+    text-transform: uppercase!;
   }
 
   ul li {
+    font-family: $font-family-secondary;
     list-style: none;
 
     &::before {
