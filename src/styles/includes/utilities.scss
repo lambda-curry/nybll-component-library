@@ -324,15 +324,15 @@
 
   @for $i from 1 through $steps {
     .max-width-#{$i * $percent-step} {
-      max-width: #{$i * $percent-step}% !important;
+      max-width: #{($i * $percent-step) + '%'} !important;
     }
   }
 
   @each $key, $value in $breakpoints {
     @media screen and (min-width: #{$value}) {
       @for $i from 1 through $steps {
-        .max-width-#{$key}-#{$i * $percent-step} {
-          max-width: #{$i * $percent-step}% !important;
+        .max-width-#{$key}-#{($i * $percent-step)} {
+          max-width: #{($i * $percent-step) + '%'} !important;
         }
       }
     }
@@ -407,7 +407,7 @@
 
   @for $i from 1 through $steps {
     .width-#{$i * $percent-step} {
-      width: #{$i * $percent-step}% !important;
+      width: #{($i * $percent-step) + '%'} !important;
     }
   }
 }
