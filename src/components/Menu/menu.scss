@@ -6,12 +6,15 @@
   --lc-color-primary-light: #{$color-green-lighter};
 
   .MuiAppBar-root {
-    margin: 0 calc($base-unit * -2);
     z-index: 50;
   }
 
   .MuiTab-wrapper {
     font-family: $base-font-family !important;
+  }
+
+  .MuiTabs-root {
+    margin: 0 -16px;
   }
 
   .MuiTabs-scrollButtonsDesktop {
@@ -131,11 +134,14 @@
 }
 
 .nybll-menu--content-list {
-  h6:first-of-type {
+  h6 {
+    font-family: $font-family-secondary !important;
     margin-top: 0;
+    text-transform: uppercase!;
   }
 
   ul li {
+    font-family: $font-family-secondary;
     list-style: none;
 
     &::before {

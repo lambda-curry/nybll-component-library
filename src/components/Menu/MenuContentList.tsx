@@ -11,12 +11,12 @@ export const MenuContentList: React.FC<MenuContentListProps> = ({ dishes, headin
 
   return (
     <div className="nybll-menu--content-list">
-      <h6 className="font-family-secondary font-weight-bold text-transform-upper">{heading}</h6>
+      <h6 className="font-weight-bold">{heading}</h6>
 
       <ul className="padding-l-0">
         {dishes.map(dish => {
           return (
-            <li key={dish.name} className="nybll-menu--content-list-item font-family-secondary font-size-sm">
+            <li key={dish.name} className="nybll-menu--content-list-item font-size-sm">
               {dish}
             </li>
           );
