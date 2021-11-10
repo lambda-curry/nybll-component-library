@@ -6,6 +6,7 @@
   --lc-color-primary-light: #{$color-green-lighter};
 
   .MuiAppBar-root {
+    margin: 0 calc($base-unit * -2);
     z-index: 50;
   }
 
@@ -23,6 +24,7 @@
       background-color: transparent;
       border-bottom: 2px solid color('green');
       color: transparent;
+      display: none !important;
       opacity: 1;
     }
   }
