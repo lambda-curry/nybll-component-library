@@ -25,8 +25,12 @@ export const MenuContentPanel: React.FC<MenuContentPanelProps> = ({ className, i
           </div>
 
           <div className="nybll-grid">
-            <div className="nybll-grid__col-xs-12">
-              <p className="margin-0">Hang tight, the chef is finalizing next week’s menu. Please check back soon.</p>
+            <div className="nybll-grid__col-xs-12 nybll-grid__col-md-6 nybll-grid__col-md-start-7">
+              <p className="margin-0">
+                Due to the holidays there will be no Nibll Home delivery for this week. The next delivery will be on
+                Tuesday, January 4th. Happy Holidays!
+              </p>
+              {/* <p className="margin-0">Hang tight, the chef is finalizing next week’s menu. Please check back soon.</p> */}
             </div>
           </div>
         </div>
